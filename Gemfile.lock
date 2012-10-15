@@ -61,6 +61,10 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.3.5)
       ffi (~> 1.0, >= 1.0.6)
+    client_side_validations (3.2.0)
+    client_side_validations-simple_form (2.0.0)
+      client_side_validations (~> 3.2.0)
+      simple_form (~> 2.0.3)
     code_analyzer (0.2.0)
       sexp_processor
     coffee-rails (3.2.2)
@@ -231,7 +235,7 @@ GEM
     shoulda-matchers (1.0.0)
     simple-navigation (3.9.0)
       activesupport (>= 2.3.2)
-    simple_form (2.0.2)
+    simple_form (2.0.4)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
     simplecov (0.6.1)
@@ -291,6 +295,8 @@ DEPENDENCIES
   brakeman
   bullet
   capybara
+  client_side_validations (~> 3.2.0)
+  client_side_validations-simple_form (~> 2.0.0)
   coffee-rails (~> 3.2.2)
   database_cleaner
   debugger
