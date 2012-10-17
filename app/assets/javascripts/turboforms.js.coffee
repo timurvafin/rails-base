@@ -1,0 +1,2 @@
+$("form").turboForms
+  debug: true
