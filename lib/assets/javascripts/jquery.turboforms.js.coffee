@@ -29,16 +29,19 @@ $.fn.extend
       else
         createDocumentUsingWrite
 
-    extractUrlTitleAndBody = (content) ->
-      doc = $(browserCompatibleDocumentParser(content))
-      ['', doc.find('body')]
+    createDocument = (content) ->
+      browserCompatibleDocumentParser content
+
+    extractUrlTitleAndBody = (doc) ->
+      title = doc.querySelector 'title'
+      [ title?.textContent, doc.body ]
 
     changePage = (title, body) ->
       log(title)
-      log(body.html())
+      log(body)
 
-      # $('title').replaceWith title
-      # $('body').html body.html()
+      document.title = title
+      document.documentElement.replaceChild body, document.body
 
     setContent = (title, body) ->
       changePage title, body
@@ -52,4 +55,6 @@ $.fn.extend
       el.bind 'ajax:complete', (event, xhr, status) ->
         log("Got response with #{status} status")
         log(xhr.responseText)
-        setContent extractUrlTitleAndBody(xhr.responseText)...
+
+        doc = createDocument xhr.responseText
+        setContent extractUrlTitleAndBody(doc)...
