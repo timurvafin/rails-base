@@ -1,3 +1,18 @@
+GIT
+  remote: git://github.com/fs/turboforms.git
+  revision: 48d8cabbca5237646b131c3434dec58dbc4ee11e
+  specs:
+    turboforms (0.0.1)
+      coffee-rails
+      turbolinks
+
+GIT
+  remote: git://github.com/fs/turbolinks.git
+  revision: 551f3d6d1f9c550cbf1aba209b399624afdbbe6f
+  specs:
+    turbolinks (0.5.1)
+      coffee-rails
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -324,6 +339,8 @@ DEPENDENCIES
   styleguides
   therubyracer
   thin
+  turboforms!
+  turbolinks!
   turnip
   uglifier (>= 1.2.3)
   webmock

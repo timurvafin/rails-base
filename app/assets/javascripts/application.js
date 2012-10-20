@@ -8,5 +8,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap/alert
 //= require twitter/bootstrap/dropdown
+//= require turbolinks
 //= require jquery.turboforms
 //= require_tree .

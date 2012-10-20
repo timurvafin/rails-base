@@ -2,7 +2,8 @@
 
 = simple_form_for resource,
     as: resource_name,
-    url: session_path(resource_name) do |f|
+    url: session_path(resource_name),
+    turboform: true do |f|
 
   legend
     | Enter your "#{app_config.app_name}" account

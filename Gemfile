@@ -13,6 +13,11 @@ group :assets do
   gem 'less-rails-bootstrap'
 
   gem 'styleguides'
+
+  gem 'turbolinks', git: 'git://github.com/fs/turbolinks.git'
+  # gem 'turbolinks', path: '../turbolinks'
+  gem 'turboforms', git: 'git://github.com/fs/turboforms.git'
+  # gem 'turboforms', path: '../turboforms'
 end
 
 gem 'jquery-rails'

@@ -5,9 +5,15 @@ SimpleNavigation::Configuration.run do |navigation|
     user.dom_class = 'pull-right nav '
 
     if user_signed_in?
-      user.item :account, current_user.full_name_with_email, '#',
-                class: 'dropdown',
-                link: { class: 'dropdown-toggle', 'data-toggle' => 'dropdown' } do |account|
+      user.item :account,
+        current_user.full_name_with_email,
+        '#',
+        class: 'dropdown',
+        'data-no-turbolink' => true,
+        link: {
+          class: 'dropdown-toggle',
+          'data-toggle' => 'dropdown'
+        } do |account|
 
         account.dom_class = 'dropdown-menu'
 
